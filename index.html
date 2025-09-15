@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar e Jantinha Camisa 11 - Cardápio</title>
+
+    <!-- Fontes modernas -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Merriweather:wght@700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: url("https://png.pngtree.com/background/20210710/original/pngtree-bbq-food-and-drink-poster-picture-image_1002963.jpg") no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        /* Overlay escuro */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: -1;
+        }
+
+        /* Menu fixo */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding: 15px;
+            border-bottom: 2px solid #FFD700;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #FFD700;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #fff;
+        }
+
+        /* Cabeçalho */
+        header {
+            text-align: center;
+            padding: 100px 20px 50px;
+        }
+
+        header h1 {
+            font-family: "Merriweather", serif;
+            font-size: 3em;
+            color: #FFD700;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        header h3 {
+            font-size: 1.4em;
+            color: #ccc;
+            font-weight: 400;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #FFD700;
+            margin: 60px 0 20px;
+            font-size: 2em;
+            border-left: 6px solid #FFD700;
+            padding-left: 12px;
+            font-family: "Merriweather", serif;
+        }
+
+        /* Grid de cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: rgba(34, 34, 34, 0.9);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-content h3 {
+            font-size: 1.1em;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .preco {
+            background: #FFD700;
+            color: #000;
+            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            min-width: 70px;
+            text-align: center;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 25px;
+            margin-top: 60px;
+            background: rgba(0, 0, 0, 0.8);
+            border-top: 2px solid #FFD700;
+            font-size: 0.9em;
+            color: #bbb;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .card img {
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Menu fixo -->
+    <nav>
+        <a href="#jantinhas">🍛 Jantinhas</a>
+        <a href="#tradicionais">🥩 Espetos</a>
+        <a href="#especiais">🔥 Especiais</a>
+        <a href="#bebidas">🍺 Bebidas</a>
+    </nav>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Camisa 11</h1>
+        <h3>Smoke & Grill - Cardápio</h3>
+    </header>
+
+    <!-- Conteúdo -->
+    <div class="container">
+
+        <h2 id="jantinhas">🍛 Jantinhas</h2>
+        <div class="grid">
+            <div class="card">
+                <img style="width: auto;"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdwALs6dD_pevdOYxezdSmHwfWN9nZwkKyNg&s"
+                    alt="Jantinha">
+                <div class="card-content">
+                    <h3>Jantinha com espeto tradicional</h3>
+                    <span class="preco">R$ 20,00</span>
+                </div>
+            </div>
+            <div class="card">
+                <img style="width: auto;"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdwALs6dD_pevdOYxezdSmHwfWN9nZwkKyNg&s"
+                    alt="Jantinha pequena">
+                <div class="card-content">
+                    <h3>Jantinha pequena com espeto tradicional</h3>
+                    <span class="preco">R$ 16,00</span>
+                </div>
+            </div>
+        </div>
+
+        <h2 id="tradicionais">🥩 Espetos Tradicionais</h2>
+        <div class="grid">
+            <div class="card"><img style="width: 100%;"
+                    src="https://imagens.jotaja.com/produtos/ae1bb526-a882-48b9-b587-f22a5bf064fa.jpg"
+                    alt="Contra Filé">
+                <div class="card-content">
+                    <h3>Contra Filé</h3><span class="preco">R$ 10,00</span>
+                </div>
+            </div>
+            <div class="card"><img style="width: 100%;"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2o7lYEJv-nqFNyi4wo7f4mE5_D8pm46jGojAA1kSQW6ychWXSeJTeYkTuW9AJthk5HV4&usqp=CAU"
+                    alt="Contra Filé">
+                <div class="card-content">
+                    <h3>Cupim</h3><span class="preco">R$ 10,00</span>
+                </div>
+            </div>
+            <div class="card"><img style="width: 100%;"
+                    src="https://kiespeto.com.br/site/wp-content/uploads/2016/08/medalhao-IMG_7182.jpg"
+                    alt="Contra Filé">
+                <div class="card-content">
+                    <h3>Medalhão de carne</h3><span class="preco">R$ 10,00</span>
+                </div>
+            </div>
+            <div class="card"><img style="width: 100%;"
+                    src="https://www.vivaespetos.com.br/wp-content/uploads/2019/05/medfrango.jpg" alt="Contra Filé">
+                <div class="card-content">
+                    <h3>Medalhão de frango</h3><span class="preco">R$ 10,00</span>
+                </div>
+            </div>
+            <div class="card"><img style="width: 100%;"
+                    src="https://s3-sa-east-1.amazonaws.com/loja2/2b9d5f9efe227e986d749d4c56c5b82e.jpg"
+                    alt="Contra Filé">
+                <div class="card-content">
+                    <h3>Medalhão de filé mignon suíno</h3><span class="preco">R$ 10,00</span>
+                </div>
+            </div>
+            <div class="card"><img style="width: 100%;"
+                    src="https://kiespeto.com.br/site/wp-content/uploads/2016/09/lombo-IMG_7247.jpg" alt="Contra Filé">
+                <div class="card-content">
+                    <h3>Lombo suíno</h3><span class="preco">R$ 10,00</span>
+                </div>
+            </div>
+            <div class="card"><img style="width: 100%;"
+                    src="https://www.receitasnestle.com.br/sites/default/files/srh_recipes/47c9a8c3eaa04e052b3e14388856e7cc.jpg"
+                    alt="Contra Filé">
+                <div class="card-content">
+                    <h3>Costelinha suína</h3><span class="preco">R$ 10,00</span>
+                </div>
+            </div>
+            <div class="card"><img style="width: 100%;"
+                    src="https://kiespeto.com.br/site/wp-content/uploads/2016/09/frango-IMG_7090.jpg" alt="Contra Filé">
+                <div class="card-content">
+                    <h3>Peito de frango</h3><span class="preco">R$ 10,00</span>
+                </div>
+            </div>
+            <div class="card"><img style="width: 100%;"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb8fBvGwgjrE0n3hlaOz6SG-m_UOgB9IrgfQ&s"
+                    alt="Contra Filé">
+                <div class="card-content">
+                    <h3>Meio da asa</h3><span class="preco">R$ 10,00</span>
+                </div>
+            </div>
+            <div class="card"><img style="width: 100%;"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSggiRHVSL5LNUYuV1hl9kbjwu7JbdOr3czGQ&s"
+                    alt="Contra Filé">
+                <div class="card-content">
+                    <h3>Coxinha da asa</h3><span class="preco">R$ 10,00</span>
+                </div>
+            </div>
+            <div class="card"><img style="width: 100%;"
+                    src="https://www.vivaespetos.com.br/wp-content/uploads/2019/05/coracao.jpg" alt="Contra Filé">
+                <div class="card-content">
+                    <h3>Coração</h3><span class="preco">R$ 10,00</span>
+                </div>
+            </div>
+            <div class="card"><img style="width: 100%;"
+                    src="https://cdn.sistemawbuy.com.br/arquivos/3c097e9d0120ba85db93128378d4e556/produtos/680a4df83bd4f/3-2-6862f67f50962.jpg"
+                    alt="Contra Filé">
+                <div class="card-content">
+                    <h3>Linguiça suína</h3><span class="preco">R$ 10,00</span>
+                </div>
+            </div>
+            <div class="card"><img style="width: 100%;"
+                    src="https://www.emporioaugusta.com.br/loja/image/cache/catalog/espetinhofloripa/linguicaapimentada-500x500.jpeg"
+                    alt="Contra Filé">
+                <div class="card-content">
+                    <h3>Linguiça suína apimentada</h3><span class="preco">R$ 10,00</span>
+                </div>
+            </div>
+            <div class="card"><img style="width: 100%;"
+                    src="https://kiespeto.com.br/site/wp-content/uploads/2016/08/toscana-IMG_7104.jpg"
+                    alt="Contra Filé">
+                <div class="card-content">
+                    <h3>Linguiça suína apimentada caseira</h3><span class="preco">R$ 10,00</span>
+                </div>
+            </div>
+            <div class="card"><img style="width: 100%;"
+                    src="https://swiftbr.vteximg.com.br/arquivos/ids/203517-768-768/617747-espetinho-de-kafta_3.jpg.jpg?v=638731458642400000"
+                    alt="Contra Filé">
+                <div class="card-content">
+                    <h3>Kafta de carne</h3><span class="preco">R$ 10,00</span>
+                </div>
+            </div>
+            <div class="card"><img style="width: 100%;"
+                    src="https://i.ytimg.com/vi/9QY8SsdIxL0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBWJjub_g0ineJcLv1M-LUkFKcBAg"
+                    alt="Contra Filé">
+                <div class="card-content">
+                    <h3>kafta de frango</h3><span class="preco">R$ 10,00</span>
+                </div>
+            </div>
+            <div class="card"><img style="width: 100%;"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2LdCuTVFbtOhDDk7ImN4CNPJ9Vt-tiFX6bw&s"
+                    alt="Cupim">
+                <div class="card-content">
+                    <h3>Carne de sol</h3><span class="preco">R$ 10,00</span>
+                </div>
+            </div>
+            <div class="card"><img style="width: 100%;"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS29aSF3APN82hMKKhy_N2NnWPgt3NPZ7xgw&s"
+                    alt="Medalhão de Frango">
+                <div class="card-content">
+                    <h3>Alcatra montada</h3><span class="preco">R$ 10,00</span>
+                </div>
+            </div>
+            <div class="card"><img style="width: 100%;"
+                    src="https://www.vivaochurrasco.com.br/wp-content/uploads/2019/05/quijocoalho.jpg"
+                    alt="Contra Filé">
+                <div class="card-content">
+                    <h3>Queijo coalho</h3><span class="preco">R$ 10,00</span>
+                </div>
+            </div>
+            <!-- Você pode repetir o mesmo modelo para os outros espetos -->
+        </div>
+
+        <h2 id="especiais">🔥 Espetos Especiais</h2>
+        <div class="grid">
+            <div class="card"><img style="width: 100%;"
+                    src="https://kiespeto.com.br/site/wp-content/uploads/2016/09/file-mignon-IMG_7190.jpg"
+                    alt="Costela Angus">
+                <div class="card-content">
+                    <h3>Filé mignon</h3><span class="preco">R$ 12,00</span>
+                </div>
+            </div>
+            <div class="card"><img style="width: 100%;"
+                    src="https://casadecarnesdomaninho.com.br/wp-content/uploads/2022/06/espetinho-pao-de-alho.jpg"
+                    alt="Costela Angus">
+                <div class="card-content">
+                    <h3>Pão de alho</h3><span class="preco">R$ 12,00</span>
+                </div>
+            </div>
+            <div class="card"><img style="width: 100%;"
+                    src="https://www.vivaespetos.com.br/wp-content/uploads/2023/09/provolone-1.jpg" alt="Costela Angus">
+                <div class="card-content">
+                    <h3>Queijo provolone</h3><span class="preco">R$ 12,00</span>
+                </div>
+            </div>
+            <div class="card"><img style="width: 100%;"
+                    src="https://www.minhareceita.com.br/app/uploads/2024/07/churrasco-de-costela-em-tiras-no-espeto-portal-minha-receita.webp"
+                    alt="Costela Angus">
+                <div class="card-content">
+                    <h3>Costela Angus</h3><span class="preco">R$ 18,00</span>
+                </div>
+            </div>
+            <div class="card"><img style="width: 100%;"
+                    src="https://www.tvchurrasco.com.br/site/wp-content/uploads/2016/02/625.jpg" alt="Costela Carneiro">
+                <div class="card-content">
+                    <h3>Costela Carneiro</h3><span class="preco">R$ 18,00</span>
+                </div>
+            </div>
+        </div>
+
+        <h2 id="bebidas">🍺 Bebidas</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-content">
+                    <h3>Água</h3><span class="preco">R$ 3,00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Água com gás</h3><span class="preco">R$ 4,00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Suco caixa 200ml</h3><span class="preco">R$ 3,00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Suco natural copo</h3><span class="preco">R$ 10,00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Suco natural jarra</h3><span class="preco">R$ 25,00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Suco Del Valle lata</h3><span class="preco">R$ 6,50</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Água tônica</h3><span class="preco">R$ 5,00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Refrigerante lata</h3><span class="preco">R$ 5,00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Refrigerante 600ml</h3><span class="preco">R$ 8,50</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Refrigerante 1,5Lt</h3><span class="preco">R$ 11,00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Refrigerante 2Lt</h3><span class="preco">R$ 14,00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Cerveja lata</h3><span class="preco">R$ 5,00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Cerveja long neck</h3><span class="preco">R$ 10,00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Cerveja 600ml</h3><span class="preco">R$ 13,50</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Cerveja 600ml Heineken</h3><span class="preco">R$ 15,00</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Pinga dose</h3><span class="preco">R$ 5,00</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 - Bar e Jantinha Camisa 11 </p>
+    </footer>
+</body>
+
+</html>
