@@ -492,6 +492,26 @@
     <footer>
         <p>&copy; 2025 - Bar e Jantinha Camisa 11 </p>
     </footer>
+    <script>
+    async function carregarCardapio() {
+      const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSoeaGGbfhRSdSon5o2RsuzTtViZTI5yqTufOrL5Mnypb41-AAb29dmXnZXvgxWN9JbEtemYeNFzgbl/pub?gid=0&single=true&output=csv"; 
+      const resposta = await fetch(url);
+      const texto = await resposta.text();
+
+      const linhas = texto.split("\n").slice(1); // pula o cabeçalho
+      let html = "";
+      linhas.forEach(linha => {
+        const [produto, preco] = linha.split(",");
+        if(produto && preco){
+          html += `<li>${produto} <span class="preco">R$ ${preco}</span></li>`;
+        }
+      });
+
+      document.getElementById("cardapio").innerHTML = html;
+    }
+
+    carregarCardapio();
+  </script>
 </body>
 
 </html>
